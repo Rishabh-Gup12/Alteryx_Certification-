@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4D7A07D665473137CCD53536D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres."public".sales.* 
+from postgres."public".sales</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>PostgresSQL input</AnnotationText>
+          <DefaultAnnotationText>DSN=PostgreSQL_Alteryx
+Query=select postgres."public".sal...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="order_line" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="Int32" />
+            <Field name="order_id" size="255" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="V_String" />
+            <Field name="order_date" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="Date" />
+            <Field name="ship_date" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="Date" />
+            <Field name="ship_mode" size="255" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="V_String" />
+            <Field name="customer_id" size="255" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="V_String" />
+            <Field name="product_id" size="255" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="V_String" />
+            <Field name="sales" scale="6" size="30" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="FixedDecimal" />
+            <Field name="quantity" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="Int32" />
+            <Field name="discount" scale="6" size="30" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="FixedDecimal" />
+            <Field name="profit" scale="6" size="30" source="File: odbc:DSN=PostgreSQL_Alteryx;UID=postgres;PWD=__EncPwd1__|||select postgres.&quot;public&quot;.sales.* &#xA;from postgres.&quot;public&quot;.sales" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="186" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\13138\AppData\Local\Temp\Engine_24740_0b10e01d34554959be119fa2a356e61d_\Engine_24512_2d81d7363c004fc7875aef6dfbdb7868_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxConnectorGui.AmazonS3Download.AmazonS3Download">
+        <Position x="174" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <AccessKey>AKIA4B5ELMPWSUPBS7C2</AccessKey>
+          <Bucket>oldsaledatas</Bucket>
+          <Object>SalesforAWS.csv</Object>
+          <EncryptionMode>1</EncryptionMode>
+          <SecretKey>4935AD884DFE8DA20AFAD69EE9E3115103CC887B7CF88D00CB4B96D1D406A5C065354C4D2EB3CC7CA62A818E6558FD041EA34DAF34AF08483FA946BA8344AE7343BB42BB4C1D418FED8CAE0009493915277C06891</SecretKey>
+          <URL>Default</URL>
+          <ServerSideEncryption>None (Default)</ServerSideEncryption>
+          <KmsKeyId />
+          <UseS3V4 value="True" />
+          <FormatSpecificOptions>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <IgnoreErrors>False</IgnoreErrors>
+            <Delimeter>,</Delimeter>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <FieldLen>254</FieldLen>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+          <FileFormat value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Cloud Input</AnnotationText>
+          <DefaultAnnotationText>Cloud Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order Line" size="254" type="V_WString" />
+            <Field name="Order ID" size="254" type="V_WString" />
+            <Field name="Order Date" size="254" type="V_WString" />
+            <Field name="Ship Date" size="254" type="V_WString" />
+            <Field name="Ship Mode" size="254" type="V_WString" />
+            <Field name="Customer ID" size="254" type="V_WString" />
+            <Field name="Product ID" size="254" type="V_WString" />
+            <Field name="Sales" size="254" type="V_WString" />
+            <Field name="Quantity" size="254" type="V_WString" />
+            <Field name="Discount" size="254" type="V_WString" />
+            <Field name="Profit" size="254" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxAmazonS3Download" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\13138\AppData\Local\Temp\Engine_24740_0b10e01d34554959be119fa2a356e61d_\Engine_24512_56fee928ac6b4af49f8ed2696d9b909f_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Sales</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="a2463bad-1343-495f-a61d-6de65a9244ff" />
+      <Telemetry>
+        <PreviousWorkflowId value="121ff686-9398-44f2-801e-ac2df033e16f" />
+        <OriginWorkflowId value="121ff686-9398-44f2-801e-ac2df033e16f" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

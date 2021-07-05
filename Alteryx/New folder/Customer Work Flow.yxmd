@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="102" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Customer ID" />
+            <Field name="Customer Name" />
+            <Field name="Segment" />
+            <Field name="Age" />
+            <Field name="Country" />
+            <Field name="City" />
+            <Field name="State" />
+            <Field name="Postal Code" />
+            <Field name="Region" />
+          </Fields>
+          <Data>
+            <r>
+              <c>CG-12520</c>
+              <c>Claire Gute</c>
+              <c>Consumer</c>
+              <c>67</c>
+              <c>United States</c>
+              <c>Henderson</c>
+              <c>Kentucky</c>
+              <c>42420</c>
+              <c>South</c>
+            </r>
+            <r>
+              <c>DV-13045</c>
+              <c>Darrin Van Huff</c>
+              <c>Corporate</c>
+              <c>31</c>
+              <c>United States</c>
+              <c>Los Angeles</c>
+              <c>California</c>
+              <c>90036</c>
+              <c>West</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Manual Entry</Name>
+          <AnnotationText>Adding Data Manually</AnnotationText>
+          <DefaultAnnotationText>Manual Entry</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="186" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\13138\AppData\Local\Temp\Engine_4396_95918654189649c5b7e10eb05124f4a9_\Engine_12928_20c40b7e90c74af68af18954a1775187_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Customer Work Flow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="f48764c0-898d-42ea-8d35-959a1a43fabb" />
+      <Telemetry>
+        <PreviousWorkflowId value="368fcf48-9282-42ed-a1a2-6e9d3e740f17" />
+        <OriginWorkflowId value="f48764c0-898d-42ea-8d35-959a1a43fabb" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
